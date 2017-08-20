@@ -1,5 +1,6 @@
 const path = require('path');
 const optimize = require('webpack').optimize;
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
@@ -30,6 +31,7 @@ module.exports = {
         devServer: {
         inline: true,
         contentBase: path.join(__dirname, 'src'),
+        hot: true,
         port: 4200
     },
     plugins: [
@@ -39,6 +41,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin()
     ]
 };
