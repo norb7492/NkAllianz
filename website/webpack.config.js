@@ -25,6 +25,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader','css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|gif|ico)$/,
+                use: ['file-loader']
             }
         ]
     },
@@ -40,7 +44,8 @@ module.exports = {
             names: ['vendor', 'manifest']
         }),
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
+            //favicon: 'favicon.ico'
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin()
