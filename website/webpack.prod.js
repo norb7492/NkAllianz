@@ -9,7 +9,7 @@ module.exports = {
 
     entry: {
         bundle: path.resolve(__dirname, 'src') + '/app/index.js',
-        vendor: ['react', 'react-dom']
+        vendor: ['react', 'react-dom', 'react-router-dom']
     },
     output: {
         path: path.resolve(__dirname, 'dist') + '/app',
