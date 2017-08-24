@@ -35,6 +35,10 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif|ico)$/,
                 use: ['file-loader?name=[name].[ext]&outputPath=app/assets/images/',
                       'image-webpack-loader']
+            },
+            {
+                test: /\.(eot|woff|woff2|ttf|svg|ico|png|jpe?g|gif)(\?\S*)?$/,
+                use: ['file-loader']
             }
         ]
     },
