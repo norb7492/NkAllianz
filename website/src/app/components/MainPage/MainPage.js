@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './MainPage.scss';
 import MainRouter from './../MainRouter/MainRouter';
-import 'modules/bootstrap/dist/css/bootstrap.css';
-import 'modules/font-awesome/scss/font-awesome.scss';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/scss/font-awesome.scss';
 //Componentes
 import NavBar from './../NavBar/NavBar';
 

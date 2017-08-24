@@ -16,8 +16,8 @@ class NavBar extends Component {
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav pullLeft>
-        <NavItem eventKey={1}><Link to='#/'><i className='fa fa-home'>&nbsp;</i>Home</Link></NavItem>
-        <NavItem eventKey={2}><Link to='#/contact'><i className='fa fa-envelope'>&nbsp;</i>Contact</Link></NavItem>
+        <NavItem eventKey={1}><Link to='/'><i className='fa fa-home'>&nbsp;</i>Home</Link></NavItem>
+        <NavItem eventKey={2}><Link to='/contact'><i className='fa fa-envelope'>&nbsp;</i>Contact</Link></NavItem>
       </Nav>
     </Navbar.Collapse>
   </Navbar>     
