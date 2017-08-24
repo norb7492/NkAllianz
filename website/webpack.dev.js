@@ -3,7 +3,7 @@ const optimize = require('webpack').optimize;
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-          
+
 module.exports = {
 
     entry: {
@@ -16,30 +16,34 @@ module.exports = {
         sourceMapFilename: '[name].map'
     },
     module: {
-        rules: [
-            {
-                test: /\.js$/,
+        rules: [{
+                test: /.js[x]?$/,
                 include: path.resolve(__dirname, 'src'),
                 exclude: path.resolve(__dirname, 'node_modules'),
                 use: 'babel-loader',
             },
             {
-                test: /\.scss$/,
+                test: /\.scss|css$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|svg|jpg|gif|ico)$/,
+                test: /\.(eot|woff|woff2|ttf|svg|ico|png|jpe?g|gif)(\?\S*)?$/,
                 use: ['file-loader']
             }
         ]
     },
-        devServer: {
+    devServer: {
         inline: true,
         contentBase: path.join(__dirname, 'src'),
         hot: true,
         port: 4200,
         stats: "errors-only",
         open: true
+    },
+    resolve: {
+        alias: {
+            modules: __dirname + '/node_modules'
+        }
     },
     plugins: [
         new optimize.UglifyJsPlugin(),
