@@ -7,7 +7,7 @@ class NavBar extends Component {
   render() {
     return (
       <div className="NavBar">
-    <Navbar inverse bg-inverse collapseOnSelect>
+    <Navbar inverse collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
         <a>NK</a>
@@ -18,6 +18,12 @@ class NavBar extends Component {
       <Nav pullLeft>
         <NavItem eventKey={1}><Link to='/'><i className='fa fa-home'>&nbsp;</i>Home</Link></NavItem>
         <NavItem eventKey={2}><Link to='/contact'><i className='fa fa-envelope'>&nbsp;</i>Contact</Link></NavItem>
+      </Nav>
+      <Nav pullRight>
+      <NavItem><img  className='Flags' src='app/assets/images/pt_BR.png'/></NavItem>
+      <NavItem><img  className='Flags' src='app/assets/images/en_US.png'/></NavItem>
+      <NavItem><img  className='Flags' src='app/assets/images/jp_JP.png'/></NavItem>
+      <NavItem><img  className='Flags' src='app/assets/images/de_GE.png'/></NavItem>
       </Nav>
     </Navbar.Collapse>
   </Navbar>     
