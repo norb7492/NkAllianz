@@ -8,6 +8,14 @@ import './../../assets/images/jp_JP.png';
 import './../../assets/images/pt_BR.png';
 
 class NavBar extends Component {
+
+
+  pageLinkClick(e){
+    e.preventDefault();
+    console.log('button clicked');
+  }
+
+
   render() {
     return (
       <div className="NavBar">
