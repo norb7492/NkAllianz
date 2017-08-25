@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './NavBar.scss';
 import { Link } from 'react-router-dom'
 import { Navbar, Nav, NavItem,Tooltip } from 'react-bootstrap';
+import './../../assets/images/de_GE.png';
+import './../../assets/images/en_US.png';
+import './../../assets/images/jp_JP.png';
+import './../../assets/images/pt_BR.png';
 
 class NavBar extends Component {
   render() {
