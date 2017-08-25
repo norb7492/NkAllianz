@@ -9,7 +9,7 @@ module.exports = {
 
     entry: {
         bundle: path.resolve(__dirname, 'src') + '/app/index.js',
-        vendor: ['react', 'react-dom', 'react-router-dom']
+        vendor: ['react', 'react-dom', 'react-router-dom', 'react-bootstrap']
     },
     output: {
         path: path.resolve(__dirname, 'dist') + '/app',
@@ -19,23 +19,23 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /.js[x]?$/,
                 include: path.resolve(__dirname, 'src'),
                 exclude: path.resolve(__dirname, 'node_modules'),
                 use: 'babel-loader',
             },
             {
-                test: /\.scss$/,
+                test: /\.scss|css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
                 })
             },
             {
-                test: /\.(png|svg|jpg|gif|ico)$/,
+                test: /\.(eot|woff|woff2|ttf|svg|ico|png|jpe?g|gif)$/,
                 use: ['file-loader?name=[name].[ext]&outputPath=app/assets/images/',
                       'image-webpack-loader']
-            }
+            },
         ]
     },
     plugins: [
