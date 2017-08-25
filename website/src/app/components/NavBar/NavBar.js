@@ -22,14 +22,14 @@ class NavBar extends Component {
     <Navbar inverse collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
-        <a>NK</a>
+        <a href='/'><img className='Logo' title='NK Allianz' src="app/assets/images/nk-logo.png"/></a>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav pullLeft>
-        <NavItem eventKey={1}><Link to='/'><i className='fa fa-home'>&nbsp;</i>Home</Link></NavItem>
-        <NavItem eventKey={2}><Link to='/contact'><i className='fa fa-envelope'>&nbsp;</i>Contact</Link></NavItem>
+        <NavItem eventKey={1}><Link to='/'><i className='fa fa-home fa-lg'  aria-hidden='true'>&nbsp;</i>Home</Link></NavItem>
+        <NavItem eventKey={2}><Link to='/contact'><i className='fa fa-envelope fa-fw' aria-hidden='true'>&nbsp;</i>Contact</Link></NavItem>
       </Nav>
       <Nav pullRight>
       <NavItem>
