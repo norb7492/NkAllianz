@@ -57,5 +57,10 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin()
-    ]
+    ],
+/*     externals: {
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true,
+      } */
 };

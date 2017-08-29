@@ -11,8 +11,8 @@ class MainPage extends Component {
     return (
       <div className="MainPage">
       <NavBar/>
-        <h1>Hello Nk Allianz</h1>
-        <MainRouter/>
+        <h1 className="title-nk">Hello Nk Allianz</h1>
+      <MainRouter/> 
       </div>
     );
   }

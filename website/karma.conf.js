@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const webpackConfig = require('./webpack.dev.js');
+const path = require('path');
 
 module.exports = function(config) {
   config.set({
@@ -22,8 +22,12 @@ module.exports = function(config) {
       module: {
         rules: [
           { 
-            test: /\.js$/, 
-            use: 'babel-loader' 
+            test: /\.js$/,
+            loader: 'babel-loader',
+            exclude: path.resolve(__dirname, 'node_modules'),
+            query: {
+              presets: ['airbnb'] 
+            }
           },
           {
             test: /\.scss|css$/,
@@ -38,6 +42,11 @@ module.exports = function(config) {
     }, 
     webpackServer: {
         noInfo: true
+      },
+      babelPreprocessor: {
+        options: {
+          presets: ['airbnb']
+        }
       }
   });
 };
