@@ -1,7 +1,7 @@
 import expect from 'expect';
 import TestUtils from 'react-dom/test-utils';
 import React from 'react';
-import MainPage from './../../components/MainPage/MainPage';
+import MainPage from './../../../components/MainPage/MainPage';
 import {shallow, mount} from 'enzyme';
 import { MemoryRouter as Router } from 'react-router-dom';
 
